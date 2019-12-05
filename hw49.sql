@@ -23,7 +23,7 @@ create table if not exists faculties(
 
 create table if not exists teachers(
 	Id int primary key auto_increment not null,
-	employmentDate date not null CHECK(employmentDate > 01-01-1990),
+	employmentDate date not null CHECK(employmentDate > '01-01-1990'),
 	name varchar(8000) not null CHECK(name != ''),
 	premium decimal(5,2) default 0 not null CHECK(premium > 0),
 	salary decimal(5,2) not null CHECK(salary > 0 OR salary = 0),
