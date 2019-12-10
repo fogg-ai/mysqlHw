@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input{
+            padding: 5px;
+            border: 0;
+            border-bottom: 2px solid #ccc;
+        }
+        input[name="gender"]{
+            margin-left: 10px;
+        }
+        input[name='login'],input[name='email']{
+            margin-left: 22px;
+        }
+        input[name='phone']{
+            margin-left: 21px;
+        }
+        form{
+            border: 2px solid green;
+            border-radius: 5px;
+            padding: 20px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <form action="registration" method="post">
+        <label>Login:
+            <input name="login" required placeholder="your login"/><br><br>
+        </label>
+        <label>Password:
+            <input type="password" name="password" placeholder="your password" required/>
+        </label>
+        <br><br>
+        <span>Gender: </span>
+        <label>
+            <input type="radio" value="Male" name="gender"/>
+            Male
+         </label>
+        <label>
+            <input type="radio" value="Female" name="gender"/>
+            Female
+        </label><br><br>
+        <label>Phone:
+            <input name="phone" required placeholder="your phone"/>
+        </label><br><br>
+        <label>Email:
+            <input type="email" name="email" placeholder="your email"/>
+        </label> <br><br>
+        <label>
+            <input type="checkbox" name="subscribe"/>
+            Subscribe
+        </label><br><br>
+        <button type="submit" name="button">
+            Send
+        </button>
+    </form>
+</body>
+</html>
