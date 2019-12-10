@@ -17,7 +17,6 @@ public class HomeServlet extends HttpServlet {
         String phone = req.getParameter("phone");
         String email = req.getParameter("email");
         String subscribe = req.getParameter("subscribe");
-
         PrintWriter writer = resp.getWriter();
         conteiner.push(login,password,gender,phone,email,subscribe);
         writer.println("<head>" +
