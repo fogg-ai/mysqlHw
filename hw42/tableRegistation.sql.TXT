@@ -3,11 +3,12 @@ CREATE DATABASE IF NOT EXISTS adminTable  DEFAULT CHARSET utf8;
 use adminTable;
 
 CREATE TABLE IF NOT EXISTS registrationTable(
-    id int primary key auto_increment,
-    login varchar(30) not null CHECK ( login != '' ),
-    password varchar(30) not null CHECK ( login != '' ),
-    gender varchar(30),
-    phone int,
-    email varchar(30),
-    subscribe BOOLEAN
+                                                id int primary key auto_increment,
+                                                login varchar(30) not null CHECK ( login != '' ),
+                                                password varchar(30) not null CHECK ( password != '' ),
+                                                gender varchar(30),
+                                                phone varchar(13),
+                                                email varchar(30),
+                                                subscribe varchar(3)
 );
+
