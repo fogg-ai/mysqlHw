@@ -19,7 +19,6 @@ public class AdminServlet extends HttpServlet {
         String user = "root";
         String passwordAd = "";
         PrintWriter writer = resp.getWriter();
-        System.out.println("Hello");
 
         writer.println("<head>" +
                 "<style>" +
@@ -56,7 +55,6 @@ public class AdminServlet extends HttpServlet {
 
 
             try (Connection conn = DriverManager.getConnection(connString, user, passwordAd)) {
-                System.out.println("Connected");
 
                 Statement stmt = conn.createStatement();
 
@@ -92,6 +90,5 @@ public class AdminServlet extends HttpServlet {
         }else {
             writer.println("Invalid data.Check password or login.");
         }
-        System.out.println("Buy");
     }
 }

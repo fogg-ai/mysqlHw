@@ -15,7 +15,6 @@ public class Conteiner {
         String user = "root";
         String passwordAd = "";
         try (Connection conn = DriverManager.getConnection(connString, user, passwordAd)) {
-            System.out.println("Connected");
 
             Statement stmt = conn.createStatement();
 
