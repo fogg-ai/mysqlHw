@@ -5,6 +5,12 @@ import java.sql.*;
 public class Conteiner {
 
     void push(String login, String password, String gender, String phone, String email, String subs) {
+
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         String connString = "jdbc:mysql://localhost:3306/adminTable?serverTimezone=Europe/Kiev&characterEncoding=utf8";
         String user = "root";
         String passwordAd = "";

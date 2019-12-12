@@ -48,6 +48,12 @@ public class AdminServlet extends HttpServlet {
                     "<th>Email</th>" +
                     "<th>Subscribe</th>" +
                     "</tr>");
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
 
             try (Connection conn = DriverManager.getConnection(connString, user, passwordAd)) {
                 System.out.println("Connected");
