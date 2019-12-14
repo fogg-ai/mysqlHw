@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            border: 2px solid #ccc;
+            width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        textarea{
+            padding: 10px;
+            border-radius: 4px;
+            border: 2px solid green;
+            resize: none;
+        }
+        button{
+            margin-left: 40%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form action="search" method="post">
+        <p>Enter an expression to search for:
+            <textarea  name="search" type="text" cols="50" rows="25">
+            </textarea></p>
+        <button name="button"  type="submit" name="button">
+            Send
+        </button>
+    </form>
+</body>
+</html>
