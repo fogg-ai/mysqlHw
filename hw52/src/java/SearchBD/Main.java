@@ -45,7 +45,6 @@ public class Main extends HttpServlet {
 
         try (Connection conn = DriverManager.getConnection(connString, user, passwordAd)) {
             Statement stmt = conn.createStatement();
-            stmt.executeQuery("use filmLife;");
             ResultSet resultSet = stmt.executeQuery(search);
 
 
