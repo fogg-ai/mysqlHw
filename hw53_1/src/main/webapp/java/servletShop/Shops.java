@@ -31,11 +31,7 @@ public class Shops extends HttpServlet {
             Statement stmt = conn.createStatement();
             String parameterName = req.getParameter("name");
             String parameterCost = req.getParameter("cost");
-            String parameterQuantity = req.getParameter("quantity");
 
-
-
-            System.out.println(parameterCost == null);
             writer.append("<head><link href=\"..//hw53_1_war//css//shop.css\" rel=\"stylesheet\" type=\"text/css\"/></head>");
             writer.append("<table>" +
                     "        <tr>" +
