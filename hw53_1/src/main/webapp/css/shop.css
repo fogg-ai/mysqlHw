@@ -1,0 +1,64 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/hw53_1_war/backgrundImg/1.jpg') no-repeat;
+    background-size: auto 100%;
+    width: auto;
+    height: auto;
+}
+
+table{
+    background: rgba(100,100,100,0.5);
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    border-radius: 5px;
+    height: 300px;
+    overflow: auto;
+}
+
+caption{
+    font-weight: bold;
+    font-family: sans-serif;
+    color:cornflowerblue;
+}
+
+.busked{
+    height: 230px;
+    overflow: auto;
+    display: block;
+}
+
+th{
+    color:white;
+    font-weight: bold;
+}
+.busked th{
+    width: 120px;
+    color:white;
+    font-weight: bold;
+}
+
+a{
+    border: 1px solid #ccc;
+    background: darkslategrey;
+    padding: 10px 40px;
+    border-radius: 4px;
+    color:white;
+    text-decoration: none;
+}
+p{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(100,100,100,0.5);
+    padding: 10px;
+}
+span{
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
