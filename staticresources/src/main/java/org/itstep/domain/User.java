@@ -11,7 +11,6 @@ public class User {
     }
 
     public User(String login, String password) {
-        System.out.println("lologa");
         this.login = login;
         this.password = password;
     }

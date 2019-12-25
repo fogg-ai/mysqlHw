@@ -9,7 +9,7 @@ form {
     margin: 100px auto;
 }
 
-form div {
+form div span {
     margin: 8px;
 }
 
@@ -21,4 +21,8 @@ form label {
 input[type=submit] {
     display: block;
     float: right;
+}
+
+input{
+    margin-top: 5px;
 }

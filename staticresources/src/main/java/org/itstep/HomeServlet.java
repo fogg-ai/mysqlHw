@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class HomeServlet extends HttpServlet {
@@ -39,11 +37,12 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("request");
+        resp.setContentType ("text/html; charset=UTF-8");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         PrintWriter writer = resp.getWriter();
-
-        writer.append("Успешная регистрация.");
+        writer.append("<head><link href=\"static/css/style.css\" rel=\"stylesheet\"/></head>");
+        writer.append("<span>Успешная регистрация.</span>");
         User user = new User(login, password);
 
         if(userDao != null) {

@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDao extends GenericDao<User> {
 
     private static final String INSERT = "INSERT INTO users(login, password) VALUES(?, ?)";
-    private static final String SELECT = "SELECT id, login, password from users";
+    private static final String SELECT = "SELECT login, password from users";
     private static final String UPDATE = "UPDATE users SET login = ?, password = ? WHERE login = ?";
     private static final String DELETE = "DELETE FROM users WHERE login = ?";
 
