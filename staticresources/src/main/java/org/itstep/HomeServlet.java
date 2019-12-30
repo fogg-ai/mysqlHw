@@ -48,8 +48,7 @@ public class HomeServlet extends HttpServlet {
         if(userDao != null) {
              userDao.save(user);
         }
-
-
+        System.out.println(userDao.findAll());
 
     }
 }

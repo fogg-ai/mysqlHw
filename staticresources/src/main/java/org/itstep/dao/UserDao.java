@@ -42,15 +42,14 @@ public class UserDao extends GenericDao<User> {
     @Override
     public List<User> findAll() {
         List<User> list = new LinkedList<>();
+        int i = 0;
         try {
             startTransaction();
             Statement stmt = connection.createStatement();
             ResultSet resultSet = stmt.executeQuery(SELECT);
 
-
             while (resultSet.next()){
-                list.add((User) resultSet.getObject(2));
-                list.add((User) resultSet.getObject(3));
+                list.add(new User(i++, resultSet.getString("login"),resultSet.getString("password")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,4 +94,6 @@ public class UserDao extends GenericDao<User> {
             e.printStackTrace();
         }
     }
+
+
 }
