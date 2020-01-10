@@ -1,0 +1,27 @@
+
+CREATE view task01 as
+Select location_id, street_address, city, state_province, country_name from locations
+join countries on locations.COUNTRY_ID = countries.COUNTRY_ID;
+
+select location_id, street_address, city, state_province, country_name from task01;
+
+CREATE view task02 as
+select first_name, last_name,department_name from employees
+join departments on employees.DEPARTMENT_ID =  departments.department_id ;
+
+select first_name, last_name,department_name from task02;
+
+CREATE view task03 as
+Select first_name, last_name, job_id, employees.DEPARTMENT_ID from employees
+join departments on employees.DEPARTMENT_ID = departments.DEPARTMENT_ID
+join locations on locations.LOCATION_ID = departments.LOCATION_ID
+WHERE CITY = 'London';
+
+select first_name, last_name, job_id, DEPARTMENT_ID from task03;
+
+CREATE view task04 as
+SELECT department_name,first_name,city from employees
+join departments on departments.DEPARTMENT_ID = employees.DEPARTMENT_ID
+join locations on departments.LOCATION_ID = locations.LOCATION_ID;
+
+select department_name,first_name,city from task04;
