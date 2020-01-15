@@ -14,6 +14,7 @@ import java.sql.SQLException;
 public class UserServlet extends HttpServlet {
 
     private CheckEntry checkEntry;
+
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -27,15 +28,18 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType ("text/html; charset=UTF-8");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
         String loginE = request.getParameter("loginE");
         String passwordE = request.getParameter("passwordE");
         PrintWriter writer = response.getWriter();
         writer.append("<head><link href=\"static/css/style.css\" rel=\"stylesheet\"/></head>");
-        if(checkEntry.checkLoginPassword(loginE,passwordE)){
+        if (checkEntry.checkLoginPassword(loginE, passwordE)) {
             writer.append("Добро пожаловать");
-        }else {
+        } else {
+            // url закодирован http://localhost:8080/static_resources_war жестко
+            // это не хорошо
             writer.append("<script>window.location=\"http://localhost:8080/static_resources_war/\";</script>");
         }
 
