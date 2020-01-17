@@ -33,7 +33,7 @@ call sp_update ('crime','dom');
 delimiter $$
 CREATE PROCEDURE sp_delete()
 begin
-     delete from directors where (select directors.directorId from directors left join movies m on directors.directorId = m.directorId where m.movieId = null);
+     delete from directors where directors.directorId in (select directors.directorId from directors left join movies m on directors.directorId = m.directorId where m.movieId = null);
 
 end $$
 delimiter ;
