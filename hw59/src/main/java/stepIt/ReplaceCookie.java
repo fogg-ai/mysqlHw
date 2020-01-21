@@ -16,28 +16,22 @@ public class ReplaceCookie extends HttpServlet {
             for (Cookie c : cookies) {
                 if (req.getParameter("key").equals(c.getName())) {
                     cookie = c;
-                    if(!req.getParameter("value").equals("")){
+                    if (!req.getParameter("value").equals("")) {
                         cookie.setValue(req.getParameter("value"));
-                        System.out.println("value");
-                    }else {
+                    } else {
                         cookie.setValue(c.getValue());
                     }
 
-                    if(!req.getParameter("time life").equals("")){
+                    if (!req.getParameter("time life").equals("")) {
                         cookie.setMaxAge(Integer.parseInt(req.getParameter("time life")));
-                        System.out.println("time");
-                    }else {
+                    } else {
                         cookie.setMaxAge(c.getMaxAge());
                     }
 
-                    if (req.getParameter("httpHttps").equals("HTTPS")) {
-                        cookie.setHttpOnly(true);
-                    }else {
-                        cookie.setHttpOnly(false);
-                    }
+
                 }
             }
-            if(!req.getParameter("key").equals("")) {
+            if (!req.getParameter("key").equals("")) {
                 resp.addCookie(cookie);
             }
         }
