@@ -29,6 +29,12 @@ public class ReplaceCookie extends HttpServlet {
                     }else {
                         cookie.setMaxAge(c.getMaxAge());
                     }
+
+                    if (req.getParameter("httpHttps").equals("HTTPS")) {
+                        cookie.setHttpOnly(true);
+                    }else {
+                        cookie.setHttpOnly(false);
+                    }
                 }
             }
             if(!req.getParameter("key").equals("")) {

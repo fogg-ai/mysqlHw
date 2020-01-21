@@ -65,6 +65,14 @@
                 <td><label for="domainAdd">Domain:</label></td>
                 <td><input id="domainAdd" name="domain"/></td>
             </tr>
+            <tr>
+                <td><label for="httpHttpsAdd">HTTPS:</label></td>
+                <td><input type="radio" id="httpHttpsAdd" name="httpHttps" value="HTTPS"/></td>
+            </tr>
+            <tr>
+                <td><label for="httpHttpAdd">HTTP:</label></td>
+                <td><input type="radio" id="httpHttpAdd" name="httpHttps" value="HTTP"/></td>
+            </tr>
         </table>
         <button type="submit">Add</button>
     </form>
@@ -86,6 +94,14 @@
             <tr>
                 <td><label for="domainReplace">Domain:</label></td>
                 <td><input id="domainReplace" name="domain"/></td>
+            </tr>
+            <tr>
+                <td><label for="httpHttpsAdd">HTTPS:</label></td>
+                <td><input type="radio" id="httpHttpsReplace" name="httpHttps" value="HTTPS"/></td>
+            </tr>
+            <tr>
+                <td><label for="httpHttpAdd">HTTP:</label></td>
+                <td><input type="radio" id="httpHttpReplace" name="httpHttps" value="HTTP"/></td>
             </tr>
         </table>
         <button type="submit">Replace</button>

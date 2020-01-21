@@ -12,16 +12,20 @@ public class AddCookie extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        Cookie cookie = null;
+        Cookie cookie;
         if(!req.getParameter("key").equals("")) {
             cookie = new Cookie(req.getParameter("key"), req.getParameter("value"));
             if(!req.getParameter("domain").equals("")) {
                 cookie.setDomain(req.getParameter("domain"));
-                System.out.println(req.getParameter("time life"));
             }
             if(!req.getParameter("time life").equals("")) {
                 cookie.setMaxAge(Integer.parseInt(req.getParameter("time life")));
-                System.out.println(req.getParameter("time life"));
+            }
+
+            if (req.getParameter("httpHttps").equals("HTTPS")) {
+                cookie.setHttpOnly(true);
+            }else {
+                cookie.setHttpOnly(false);
             }
             resp.addCookie(cookie);
         }
