@@ -23,9 +23,9 @@ public class AddCookie extends HttpServlet {
             }
 
             if (req.getParameter("httpHttps").equals("HTTPS")) {
-                cookie.setHttpOnly(true);
+                cookie.setSecure(true);
             }else {
-                cookie.setHttpOnly(false);
+                cookie.setSecure(false);
             }
             resp.addCookie(cookie);
         }
