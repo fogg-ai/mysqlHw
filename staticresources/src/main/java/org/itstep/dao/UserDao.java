@@ -48,8 +48,9 @@ public class UserDao extends GenericDao<User> {
             Statement stmt = connection.createStatement();
             ResultSet resultSet = stmt.executeQuery(SELECT);
 
-            while (resultSet.next()){
-                list.add(new User(i++, resultSet.getString("login"),resultSet.getString("password")));
+            while (resultSet.next()) {
+                // id нужно брать из бд
+                list.add(new User(i++, resultSet.getString("login"), resultSet.getString("password")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -94,6 +95,5 @@ public class UserDao extends GenericDao<User> {
             e.printStackTrace();
         }
     }
-
 
 }
