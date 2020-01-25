@@ -14,10 +14,14 @@
         }
         tr{
             border-radius: 10px;
+            padding: 10px 15px;
         }
         td{
             padding: 10px 15px;
             border-radius: 10px;
+        }
+        th{
+            padding: 10px 15px;
         }
 
     </style>
@@ -33,7 +37,7 @@
     </thead>
     <tbody>
     <%
-        if(session.getAttribute("disk")!=null) {
+        if(session.getAttribute("disk")!= null) {
             List<DiskCD> disks = (List<DiskCD>)session.getAttribute("disk");
 
             Collections.sort(disks, new Comparator<DiskCD>() {
