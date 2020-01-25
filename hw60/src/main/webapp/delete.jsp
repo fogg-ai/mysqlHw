@@ -57,7 +57,6 @@
 
         for (DiskCD disk: disks) {
             if(request.getParameter("name").equals(disk.getName())){
-                System.out.println(disk.getId());
                 disks.remove(disk);
                 break;
             }

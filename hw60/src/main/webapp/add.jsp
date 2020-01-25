@@ -63,7 +63,6 @@
         List<DiskCD> disks = (List<DiskCD>) session.getAttribute("disk");
         DiskCD diskCd = new DiskCD(disks.size() + 1,request.getParameter("name"),Integer.parseInt(request.getParameter("cost")));
         disks.add(diskCd);
-        System.out.println(disks.size());
     }
 
 
