@@ -14,6 +14,7 @@ public class AddCookie extends HttpServlet {
         resp.setContentType("text/html");
         Cookie[] cookies = req.getCookies();
         boolean check = true;
+
         Cookie cookie;
         for (Cookie c : cookies) {
             if (c.getName().equals(req.getParameter("key"))) {
