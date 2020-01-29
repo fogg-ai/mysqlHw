@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.servlet.http.Cookie;
 
 public class ReplaceCookie extends HttpServlet {
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         Cookie[] cookies = req.getCookies();
         Cookie cookie = null;
@@ -16,13 +16,13 @@ public class ReplaceCookie extends HttpServlet {
             for (Cookie c : cookies) {
                 if (req.getParameter("key").equals(c.getName())) {
                     cookie = c;
-                    if (!req.getParameter("value").equals("")) {
+                    if (!"".equals(req.getParameter("value"))) {
                         cookie.setValue(req.getParameter("value"));
                     } else {
                         cookie.setValue(c.getValue());
                     }
 
-                    if (!req.getParameter("time life").equals("")) {
+                    if (!"".equals(req.getParameter("time life"))) {
                         cookie.setMaxAge(Integer.parseInt(req.getParameter("time life")));
                     } else {
                         cookie.setMaxAge(c.getMaxAge());

@@ -67,11 +67,11 @@
             </tr>
             <tr>
                 <td><label for="httpHttpsAdd">HTTPS:</label></td>
-                <td><input type="radio" id="httpHttpsAdd" name="httpHttps" value="HTTPS"/></td>
+                <td><input type="radio" id="httpHttpsAdd" name="httpHttps" value="HTTPS" /></td>
             </tr>
             <tr>
                 <td><label for="httpHttpAdd">HTTP:</label></td>
-                <td><input type="radio" id="httpHttpAdd" name="httpHttps" value="HTTP"/></td>
+                <td><input type="radio" id="httpHttpAdd" name="httpHttps" value="HTTP" checked/></td>
             </tr>
         </table>
         <button type="submit">Add</button>

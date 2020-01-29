@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class DeleteCookie extends HttpServlet {
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
-        if (!req.getParameter("key").equals("")) {
+        if (!"".equals(req.getParameter("key"))) {
             Cookie[] cookies = req.getCookies();
             Cookie cookie = null;
             if (cookies != null) {
