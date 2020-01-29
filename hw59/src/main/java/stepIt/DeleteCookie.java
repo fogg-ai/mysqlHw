@@ -1,7 +1,6 @@
 package stepIt;
 
 
-import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,18 +12,16 @@ public class DeleteCookie extends HttpServlet {
         resp.setContentType("text/html");
         if (!"".equals(req.getParameter("key"))) {
             Cookie[] cookies = req.getCookies();
-            Cookie cookie = null;
             if (cookies != null) {
                 for (Cookie c : cookies) {
-                    if (req.getParameter("key").equals(c.getName())) {
-                        cookie = c;
+                    if (c.getName().equals(req.getParameter("key"))) {
+                        c.setMaxAge(0);
+                        resp.addCookie(c);
                         break;
                     }
                 }
             }
 
-            cookie.setMaxAge(0);
-            resp.addCookie(cookie);
         }
         resp.sendRedirect(getServletContext().getContextPath() + "/");
 
