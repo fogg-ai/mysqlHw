@@ -10,15 +10,19 @@ import java.io.IOException;
 
 public class AddCookie extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         Cookie cookie;
-        if(!req.getParameter("key").equals("")) {
-            cookie = new Cookie(req.getParameter("key"), req.getParameter("value"));
-            if(!req.getParameter("domain").equals("")) {
+        if(!"".equals(req.getParameter("key"))) {
+            cookie = new Cookie(req.getParameter("key"),"");
+
+            if(!"".equals(req.getParameter("value"))){
+                cookie.setValue(req.getParameter("value"));
+            }
+            if(!"".equals(req.getParameter("domain"))) {
                 cookie.setDomain(req.getParameter("domain"));
             }
-            if(!req.getParameter("time life").equals("")) {
+            if(!"".equals(req.getParameter("time life"))) {
                 cookie.setMaxAge(Integer.parseInt(req.getParameter("time life")));
             }
 
