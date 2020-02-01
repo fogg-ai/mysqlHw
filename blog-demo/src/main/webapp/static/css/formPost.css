@@ -1,0 +1,43 @@
+
+.add,.replace,.delete{
+    background: white;
+    color: black;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+#titleDelete{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+
+input{
+    border: none;
+    background: #ccc;
+    padding-left: 10px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+textarea{
+    background: #ccc;
+}
+
+.butPost{
+    margin-left: 40%;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: #ccc;
+}
+h2{
+    margin-left: 35%;
+}

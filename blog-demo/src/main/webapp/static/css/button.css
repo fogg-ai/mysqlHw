@@ -1,0 +1,9 @@
+.logout{
+    position: fixed;
+    top:90%;
+    left: 95%;
+    border:2px solid red;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: #ccc;
+}
