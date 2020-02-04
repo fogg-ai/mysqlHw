@@ -1,0 +1,11 @@
+.adminCount{
+    position: fixed;
+    color:white;
+    top:10%;
+    left: 0;
+    width: 80px;
+    background: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-left: 5px;
+}
