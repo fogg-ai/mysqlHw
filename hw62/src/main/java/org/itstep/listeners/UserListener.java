@@ -4,7 +4,7 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 public class UserListener implements HttpSessionListener {
-    private static int count = 0;
+    static int count = 0;
 
     public static int getCount(){
         return count;
